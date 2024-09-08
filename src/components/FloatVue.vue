@@ -10,7 +10,7 @@
         bottom: `${triggerPosition.bottom}px`,
       }"
     >
-      <slot name="icon" />
+      <slot name="trigger" />
     </div>
     <div
       v-if="isOpen"

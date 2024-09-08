@@ -4,7 +4,7 @@
     :zIndex="1000"
     :triggerPosition="{ bottom: 20, right: 20 }"
   >
-    <template #icon>
+    <template #trigger>
       <div class="svg-icon">
         <svg
           width="800px"

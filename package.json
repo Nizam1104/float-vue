@@ -3,7 +3,7 @@
   "author": "Nizam Vali",
   "email": "nizamvali1104@gmail.com",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue.js float component",
   "main": "dist/float-vue.umd.js",
   "module": "dist/float-vue.esm.js",

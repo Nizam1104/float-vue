@@ -1,4 +1,4 @@
-# floater-vue
+# float-vue
 
 ## Project setup
 ```

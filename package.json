@@ -1,43 +1,38 @@
 {
-  "name": "floater-vue",
-  "version": "0.1.0",
-  "private": true,
+  "name": "float-vue",
+  "author": "Nizam Vali",
+  "email": "nizamvali1104@gmail.com",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "A Vue.js float component",
+  "main": "dist/float-vue.umd.js",
+  "module": "dist/float-vue.esm.js",
+  "unpkg": "dist/float-vue.min.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "dev": "vite dev",
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/float-vue.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/float-vue.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/float-vue.min.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@vitejs/plugin-vue": "^5.1.3",
+    "@vue/compiler-sfc": "^3.2.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "vite": "^5.4.3",
+    "vue": "^3.2.0"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
+  "peerDependencies": {
+    "vue": "^3.2.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+  "dependencies": {
+    "vue-draggable-resizable": "^3.0.0"
+  }
 }
